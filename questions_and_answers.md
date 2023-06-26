@@ -10,9 +10,9 @@ LinkedIn: https://www.linkedin.com/in/jjustinmayo/
 
 ### How many total fights has there been since 2009? Of this number, how many were title/non-title fights?
 
-```
+```sql
 SELECT
-	count(*) AS "total number of fights",
+    count(*) AS "total number of fights",
     count(CASE WHEN title_bout = 'True' THEN date END) AS "total number of title fights",
     count(CASE WHEN title_bout = 'False' THEN date END) AS "total number of non-title fights"
 FROM ufc_data.fight_data;
